@@ -12,7 +12,7 @@ class PersonaController extends Controller
      */
     public function index()
     {
-        //
+        return view('persons.indexp');
     }
 
     /**
@@ -20,7 +20,7 @@ class PersonaController extends Controller
      */
     public function create()
     {
-        //
+        return view('persons.createp');
     }
 
     /**
@@ -44,7 +44,7 @@ class PersonaController extends Controller
      */
     public function edit(Persona $persona)
     {
-        //
+        return view('persons.editp');
     }
 
     /**
