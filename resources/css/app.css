@@ -1,0 +1,328 @@
+/* ==========================
+   ESTILOS GENERALES
+========================== */
+body {
+    background: #f4f6fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================
+   HEADER
+========================== */
+header .header {
+    background: linear-gradient(90deg, #005baa 0%, #34A9CF 100%);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1,
+header p {
+    margin: 0;
+}
+
+header img {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 180px;
+}
+
+/* ==========================
+   LOGIN PAGE
+========================== */
+.login-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#loginForm {
+    margin-top: 30px;
+}
+
+#FondoCuadro {
+    position: relative;
+    margin: 20px auto;
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(90deg, #005baa 0%, #34A9CF 100%);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    clip-path: polygon(0% 0%,100% 0%,100% 80%,90% 100%,10% 90%,0% 100%);
+    animation: wave 2.5s infinite linear alternate;
+}
+
+@keyframes wave {
+    0% {
+        clip-path: polygon(0% 30%,100% 0%,100% 80%,90% 80%,10% 90%,0% 100%);
+    }
+    100% {
+        clip-path: polygon(0% 10%,100% 0%,100% 90%,90% 100%,0% 100%,0% 90%);
+    }
+}
+
+/* ==========================
+   MENÚ Y USUARIO
+========================== */
+
+.menu-links a {
+    background: linear-gradient(90deg, #005baa 0%, #34A9CF 100%);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-links a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.menu-links input[type="search"] {
+    width: 220px;
+    border: 2px solid #34A9CF;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    color: #005baa;
+    box-shadow: 0 2px 8px rgba(0,91,170,0.08);
+    outline: none;
+}
+
+.menu-user-info {
+    font-size: 0.95rem;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+    border: 1px solid #005baa;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f9fbfd;
+}
+
+/* ==========================
+   BOTÓN NUEVO
+========================== */
+#solo {
+    display: inline-block;
+    padding: 10px 18px;
+    background: linear-gradient(90deg, #005baa 0%, #34A9CF 100%);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#solo:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #34A9CF 0%, #005baa 100%);
+}
+
+/* ==========================
+   TABLAS
+========================== */
+.table {
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 91, 170, 0.10);
+    background: #fff;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    text-align: center;
+    padding: 12px;
+    font-size: 0.95rem;
+}
+
+.table thead {
+    background: linear-gradient(90deg, #005baa 0%, #34A9CF 100%);
+    color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #f2f7fb;
+}
+
+.table tbody tr:hover {
+    background: #e3f2fd;
+    transition: background 0.2s;
+}
+
+/* ==========================
+   FORMULARIOS Y BOTONES
+========================== */
+div > label {
+    font-weight: bold;
+    color: #005baa;
+    margin-top: 12px;
+    display: inline-block;
+    width: 160px;
+}
+
+div > input[type="text"], 
+div > input[type="password"] {
+    width: 320px;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #34A9CF;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #fff;
+}
+
+button[type="submit"] {
+    background: linear-gradient(90deg, #005baa 0%, #34A9CF 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 12px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,91,170,0.08);
+    transition: background 0.2s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #34A9CF 0%, #005baa 100%);
+    transform: scale(1.05);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    background:#204a63;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+}
+/* ---- MENÚ DE ENLACES ---- */
+.menu-links {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 25px;
+    padding: 15px;
+    margin: 0;
+    background: linear-gradient(90deg, #005baa 0%, #34A9CF 100%);
+    border-bottom: 3px solid #004080;
+}
+
+.menu-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.menu-links a:hover {
+    color: #ffdd57;
+}
+
+/* ---- FORMULARIO ---- */
+form {
+    max-width: 700px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Create */
+.menu-links a {
+    text-decoration: none;
+}
+
+form label {
+    font-weight: 500;
+}
+
+form input, form select {
+    border-radius: 8px;
+}
+
+/* form button {
+    padding: 10px 20px;
+    font-size: 16px;
+} */
+
+/*btn edit de mostrar*/
+.btn-edit {
+    display: inline-block;
+    background: linear-gradient(90deg, #005baa 0%, #34A9CF 100%);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 91, 170, 0.15);
+}
+
+.btn-edit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 91, 170, 0.25);
+    background: linear-gradient(90deg, #34A9CF 0%, #005baa 100%);
+}
+
+/*btn delete de mostrar*/
+.btn-delete {
+    display: inline-block;
+    background: linear-gradient(90deg, #d9534f 0%, #c9302c 100%); /* Rojo estilo bootstrap */
+    color: #fff;
+    padding: 6px 14px;       /* Tamaño similar al botón editar */
+    border-radius: 8px;      /* Menos redondeado que el global */
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;            /* Quita borde blanco */
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-delete:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    background: linear-gradient(90deg, #c9302c 0%, #d9534f 100%);
+}
