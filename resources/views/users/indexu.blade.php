@@ -6,9 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h4>Prueba IndexPerson</h4>
-    <form action="/persons/createp">
-        <button type="submit">Crear Usuario</button>
-    </form>
+    <h3>Prueba user</h3>
 </body>
 </html>

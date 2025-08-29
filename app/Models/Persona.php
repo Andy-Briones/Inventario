@@ -21,7 +21,7 @@ class Persona extends Model
     public $timestamps = true;
     public function user()
     {
-        return $this->hasOne(User::class, 'persona_id', 'idPersona');
+        return $this->hasOne(User::class, 'persona_idPersona', 'idPersona');
     }
 
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Persona;
+use Faker\Provider\ar_EG\Person;
 use Illuminate\Http\Request;
 
 class PersonaController extends Controller
@@ -12,7 +13,8 @@ class PersonaController extends Controller
      */
     public function index()
     {
-        return view('persons.indexp');
+        $datosp['persons'] = Persona::paginate(5);
+        return view('persons.indexp', $datosp);
     }
 
     /**
@@ -28,7 +30,14 @@ class PersonaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nombre' => 'required',
+            'apellido' => 'required',
+            'dni' => 'required|unique:personas',
+        ]);
+        Persona::create($request->all());
+        return redirect()->route('persons.indexp')
+            ->with('success', 'Persona creada correctamente.');
     }
 
     /**
@@ -44,7 +53,7 @@ class PersonaController extends Controller
      */
     public function edit(Persona $persona)
     {
-        return view('persons.editp');
+        return view('persons.editp', compact('persona'));
     }
 
     /**
@@ -52,7 +61,14 @@ class PersonaController extends Controller
      */
     public function update(Request $request, Persona $persona)
     {
-        //
+        $request->validate([
+            'nombre' => 'required',
+            'apellido' => 'required',
+            'dni' => 'required|unique:personas,dni,' . $persona->idPersona . ',idPersona',
+        ]);
+        $persona->update($request->all());
+        return redirect()->route('persons.indexp')
+            ->with('success', 'Persona actualizada correctamente.');
     }
 
     /**
